@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>
+        <center><u>STUDENT INFORMATION FORM</u></center>
+    </h1>
+    <form name="form1" onsubmit="return valid()" action="">
+        <label for="sname"><b>Name:</b></label>
+        <input type="text" id="sname" name="sname"><br><br>
+        <label for="rrollno"><b>Roll no. :</b></label>
+        <input type="text" id="rrollno" name="rrollno"><br><br>
+        <label for="semail"><b>Email :</b></label>
+        <input type="email" id="semail" name="semail"><br><br>
+        <label for="sage"><b>Age</b></label>
+        <input type="text" id="sage" name="sage"><br><br>
+        <label for="sgender"><b>Gender</b></label>
+        <input type="radio" id="sgender"><label for="sgender">Male</label>&nbsp;<input type="radio" id="sgender"><label
+            for="sgender">Female</label><br><br>
+        <label for="ssociety"><b>Societies</b></label>
+        <input type="checkbox" id="ssociety" checked="checked"><label for="ssociety">Dance</label>&nbsp;
+        <input type="checkbox" id="ssociety"><label for="ssociety">Music</label>&nbsp;
+        <input type="checkbox" id="ssociety"><label for="ssociety">Sports</label>&nbsp;
+        <input type="checkbox" id="ssociety"><label for="ssociety">Art and Literature</label>&nbsp;<br><br>
+        <label for="scourse"><b>Course</b></label>
+        <select name="scourse" id="scourse">
+            <option value="operating system">operating system</option>
+            <option value="data structure and algorithm">data structure and algorithm</option>
+            <option value="networking">networking</option>
+            <option value="web development">web development</option>
+            <option value="investment in stock market">investment in stock market</option>
+        </select><br><br>
+        <label for="saddress"><b>Address:</b></label>
+        <input type="text" id="saddress" name="saddress"><br><br>
+        <b>Select image to upload:</b>
+        <input type="file" name="fileToUpload" id="fileToUpload">
+        <input type="submit" value="Upload Image" name="submit"><br><br>
+        <button type="submit" value="Submit">Submit</button>
+        <button type="reset" value="Reset">Reset</button>
+
+    </form>
+    <script>
+        //to check if any text area is empty or not
+        function valid() {
+            var na = document.getElementById("sname").value;
+            var ag = document.getElementById("sage").value;
+            var em = document.getElementById("semail").value.indexOf("@");
+            var rno = document.getElementById("rrollno").value;
+            var ad=document.getElementById("saddress").value;
+            var f = document.getElementById("fileToUpload").value;
+            var allowedExtensions =
+/(\.jpeg|\.jpg|\.png)$/i;
+            if (na == "" || na == null) {
+                alert("Enter The Name");
+                return false;
+            }
+            else if (isNaN(ag) || ag <16 || ag >22) {
+                alert("The age must be a number between 16 and 22");
+                return false;
+            }
+            else if (em == -1) {
+                alert("E-mail ID is not valid");
+                return false;
+            }
+            else if (rno == "" || rno == null) {
+                alert("Enter The roll No");
+                return false;
+            }
+            else if(ad==""||ad== null){
+                alert("Enter the address");
+                return false; 
+            }
+            else if(f==""||f==null){
+                alery("enter the file");
+                return false;
+            }
+            else if(!allowedExtensions.exec(f)){
+                alert("enter valid format");
+                return false;
+            }
+            else
+                alert("The Student Information Submitted Successfully");
+        }
+    </script>
+    </script>
+</body>
+
+</html>

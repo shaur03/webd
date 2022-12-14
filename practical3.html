@@ -1,0 +1,91 @@
+<html>
+  <head>
+    <title>Sign Up</title>
+  </head>
+
+  <body>
+    <div style="margin: 20">
+      <h1 align="center">Student Registration form</h1>
+      <form>
+        <p>
+          Student Name -
+          <input
+            type="text"
+            name="Name"
+            placeholder="write the name here"
+            maxsize="100"
+            size="70"
+            required
+          />
+        </p>
+        <p>
+          Roll Number -
+          <input type="roll" name="roll no." placeholder="write your roll no. here" />
+        </p>
+		<p>
+          Email -
+          <input type="email" name="email" placeholder="write your email here" />
+        </p>
+        <div>
+          Age - <input type="date" name="Age" /><br /><br />AGE
+          <input
+            type="number"
+            name="AGE."
+            placeholder="00"
+          /><br /><br />
+          <fieldset>
+            <legend>Gender</legend>
+            Male <input type="radio" name="gender" checked=" " /> Female
+            <input type="radio" name="gender" /> Others
+            <input type="radio" name="gender" />
+          </fieldset>
+          <br />
+        </div>
+        <p>Societies :-</p>
+        <div>
+          <input type="checkbox" name="course" />
+          <label for="course"> KALAMKAR </label><br />
+        </div>
+        <div>
+          <input type="checkbox" name="course" />
+          <label for="course"> ENACTUS </label><br />
+        </div>
+        <div>
+          <input type="checkbox" name="course" />
+          <label for="course"> RHAPSODY </label><br />
+        </div>
+		
+		<br>
+		<label for="cars">COURSES:</label>
+
+<select name="cars" id="cars">
+  <option value="bsc">B.Sc(H)C.S.</option>
+  <option value="bcom">B.Com(H)</option>
+  <option value="B.A.Program">B.A.Program</option>
+  <option value="B.A.(H)">B.A.(H)</option>
+</select>
+
+<br><br><br>
+        <p>Address :-</p>
+        <textarea
+          id="Address"
+          name="Address"
+          rows="5"
+          cols="30"
+          required
+          style="resize: none"
+        ></textarea>
+		<BR>
+		<BR>
+		<p>IMAGE UPLOAD-</p>
+        <div>
+		<input type="file" id="myFile" name="filename">
+  
+		</div>
+        <br /><br />
+        <input type="reset" value="Reset Form" /><br /><br />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>
